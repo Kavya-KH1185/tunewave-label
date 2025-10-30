@@ -1,0 +1,119 @@
+.navbar-container {
+  position: fixed;
+  top: 30px;              /* moves navbar down from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1200px;
+  z-index: 1001;          /* keep navbar above modal background */
+}
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px;
+  background: linear-gradient(93.78deg, rgba(17,18,20,0.75) 4.87%, rgba(12,13,15,0.9) 75.88%);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0px -8px 32px 0px rgba(18,120,187,0.4) inset,
+              0px 0px 12px 0px rgba(220,159,159,0.08) inset,
+              0px 53px 15px 0px rgba(18,120,187,0.01),
+              0px 2px 5px 0px rgba(18,120,187,0.39);
+}
+
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;      /* your exact spacing */
+  border-radius: 8px;
+  position: relative;     /* for underline positioning */
+  transition: color 0.3s ease;
+}
+
+/* Active link styling */
+.navbar .nav-links a.active {
+  color: #00bfff; /* highlight color */
+}
+
+/* Simple single underline */
+.navbar .nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;        /* sits flush with the bottom of the text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00bfff;
+  border-radius: 1px;
+}
+
+.navbar .more-info-btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #1278BB 0%, #13A89E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-left: -20px; /* 👈 Move slightly left */
+}
+
+.navbar .more-info-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(18, 120, 187, 0.4);
+}
+
+
+/* Modal background */
+.modal {
+  display: none;
+  position: fixed;           /* stays above page content */
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow-y: auto;          /* allows scrolling if content is tall */
+  background-color: rgba(0,0,0,0.5);
+  padding: 50px 0;           /* spacing from top and bottom */
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: #fff;
+  color: #000;
+  margin: 100px auto 0 auto;  /* move down 100px */
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  overflow-y: auto;
+  max-height: 80vh;
+  box-sizing: border-box;
+}
+
+
+
+
+.close {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.form-group { margin-bottom: 15px; }
+input, select, textarea { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; }
+textarea { resize: none; height: 80px; }
+
+.submit-btn {
+  padding: 12px 24px;
+  background: linear-gradient(180deg, #1278BB 0%, #13A89E 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}

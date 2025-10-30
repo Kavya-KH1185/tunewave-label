@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #fff; /* Ensure full white background */
+  color: #222;
+}
+
+/* Ensure footer background doesn't overlap the page */
+.footer-info-section {
+  margin-top: 120px;
+}
+
+/* ===============================
+   CONTACT HEADER
+=============================== */
+.contact-header {
+  text-align: center;
+  margin-top: 120px; /* Push below navbar */
+  margin-bottom: 50px;
+}
+
+.page-title {
+  font-size: 48px;
+  font-weight: 800;
+  background: linear-gradient(33.64deg, #0B639A 18.98%, #fff 26.46%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===============================
+   CONTACT FORM SECTION
+=============================== */
+.contact-form-section {
+  /*background: url('../assets/contactus.jpg') center center/cover no-repeat;*/
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  background: linear-gradient(92.99deg, #1278BB 3.3%, #13A89E 100%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(18, 120, 187, 0.3);
+}
+
+.submit-btn:hover {
+  background: white;
+  color: #1278BB;
+  border: 2px solid #1278BB;
+  box-shadow: 0 0 10px rgba(18, 120, 187, 0.5);
+}
+
+/* ===============================
+   INFO SECTION
+=============================== */
+.contact-info-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-section {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-weight: 600;
+  color: #fff;
+}
+
+input[readonly] {
+  width: 280px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #000;
+  background: #fff; /* 🤍 White background */
+  cursor: default;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[readonly]:focus {
+  outline: none;
+  border-color: #13A89E;
+  box-shadow: 0 0 6px rgba(19, 168, 158, 0.3);
+}
+
+/* ===============================
+   MAP SECTION
+=============================== */
+.contact-map-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.map-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map-container iframe {
+  width: 500px;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+}

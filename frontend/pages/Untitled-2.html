@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tunewave | About Us</title>
+  <link rel="stylesheet" href="css/global.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Starfield Background Canvas -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Navbar -->
+  <div class="navbar-container">
+    <div class="navbar">
+      <div class="logo">
+        <img src="assets/logo1.svg" alt="Tunewave Logo">
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="rectangle-103">
+    <div class="hero-content">
+      <h1 class="who-we-are">Who We Are</h1>
+      <p class="who-we-are-desc">
+        Our Process Made Simple and Effective. Turning Concepts Into Reality, Step by Step.
+      </p>
+      <button class="more-info-btn">More Info</button>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="rectangle-92">
+    <div class="about-us-content">
+      <h2 class="about-us-title">About Us</h2>
+      <p class="about-us-desc">
+        Tunewave is committed to providing innovative solutions that transform ideas into reality.
+      </p>
+    </div>
+    <div class="stats-rectangle">
+      <div class="stat-card">
+        <p class="stat-happy-number">120+</p>
+        <p class="stat-happy-label">Projects Completed</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-happy-number">50+</p>
+        <p class="stat-happy-label">Happy Clients</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Are Section -->
+  <section class="container-7">
+    <div class="top-section">
+      <h2 class="who-we-are">Who We Are</h2>
+      <p class="tunewave-desc">
+        Tunewave is a next-generation media and technology company dedicated to delivering high-quality digital solutions for businesses worldwide.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="features-image">
+      <img src="assets/features-img.png" alt="Features">
+    </div>
+    <div class="features-text">
+      <h2>Our Features</h2>
+      <p class="features-subtext">Why Choose Tunewave?</p>
+      <p class="features-description">
+        We offer <span>innovative solutions</span>, cutting-edge technology, and a dedicated team to bring your vision to life.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2 class="faq-title">FAQ</h2>
+    <p class="faq-subtitle">Frequently Asked Questions</p>
+    <div class="faq-columns">
+      <div class="faq-column">
+        <div class="faq-item">
+          <div class="faq-question">
+            What services do you offer?
+            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <p class="faq-answer">
+            We provide digital solutions including web development, AI integration, and media services.
+          </p>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            How can I contact you?
+            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <p class="faq-answer">
+            You can reach us via email or through our contact form on the website.
+          </p>
+        </div>
+      </div>
+      <div class="faq-column">
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you provide custom solutions?
+            <span class="faq-toggle"><i class="fas fa-chevron-down"></i></span>
+          </div>
+          <p class="faq-answer">
+            Yes, all our solutions are tailored to meet specific client requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer-info-section">
+    <div class="footer-info-container">
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: info@tunewave.com</p>
+        <p>Phone: +91 1234567890</p>
+      </div>
+      <div>
+        <h3>Follow Us</h3>
+        <p>Facebook | Twitter | LinkedIn</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ Toggle JS -->
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+
+  <!-- Starfield JS -->
+  <script>
+    const canvas = document.getElementById('starfield');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+    const STAR_COUNT = 150;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function initStars() {
+      stars = [];
+      for(let i = 0; i < STAR_COUNT; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 1.5,
+          d: Math.random()
+        });
+      }
+    }
+    initStars();
+
+    function drawStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "white";
+      ctx.shadowColor = "white";
+      ctx.shadowBlur = 2;
+      stars.forEach(star => {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      moveStars();
+      requestAnimationFrame(drawStars);
+    }
+
+    function moveStars() {
+      stars.forEach(star => {
+        star.y += star.d;
+        if(star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      });
+    }
+
+    drawStars();
+  </script>
+
+</body>
+</html>

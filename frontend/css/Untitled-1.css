@@ -1,0 +1,399 @@
+/* Basic Reset and Variables (Optional but good practice) */
+:root {
+    --primary-color: #4A90E2; /* A blue color often used for links/buttons */
+    --text-light: #FFFFFF;
+    --text-medium: #CCCCCC;
+    --bg-dark: #000000;
+    --nav-bg: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the nav */
+    --nav-height: 80px;
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Use your preferred font */
+    background-color: var(--bg-dark);
+}
+
+/* 1. STICKY NAVIGATION BAR STYLES */
+.sticky-nav {
+    /* The key properties for a fixed top navigation bar */
+    position: fixed; /* Makes the element fixed relative to the viewport */
+    top: 31px; /* Positions it at the very top */
+    left: 118px; /* Ensures it spans the full width */
+    /* width: 100%;  */
+    right: 118px;
+    z-index: 1000; /* Ensures it stays on top of other content */
+
+    /* Styling based on the image */
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px); /* Optional: Gives it a modern, slightly transparent look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    height: var(--nav-height);
+    border: 1px solid rgba(255, 255, 255, 0.06); 
+    border-radius: 16px;
+}
+
+.nav-container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* .logo {
+  margin-left: 0PX;
+} */
+/* Logo Styling */
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 25px; /* Adjust size */
+    margin-right: 10px;
+    /* In a real project, this would be an actual image/SVG */
+}
+
+
+/* Navigation Links Styling */
+.nav-links a {
+    color: var(--text-medium);
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--text-light);
+}
+
+.nav-links a.active {
+    color: var(--text-light);
+    border-bottom: 2px solid var(--primary-color); /* Highlight for the active link */
+}
+
+/* Action Button Styling */
+.more-info-btn {
+    text-decoration: none;
+    color: var(--text-light); /* Assuming this is a light color like white */
+    padding: 8px 15px;
+    border: 1px solid var(--text-light);
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Use your specified background color */
+    background-color: rgba(18, 120, 187, 0.4); 
+    display: inline-block; /* Essential for padding to work correctly on 'a' tag */
+}
+
+.more-info-btn:hover {
+    /* Use your specified hover background color */
+    background-color: rgba(220, 159, 159, 0.08);
+    /* Change text color on hover if needed for contrast */
+    color: var(--primary-blue); 
+}
+
+
+
+.more-info-section {
+  padding: 60px 10px; /* increased top/bottom padding */
+  margin-top: 60px;    /* optional extra space below marquee */
+  text-align: center;
+  background-color: #0b1224; /* dark background to match hero */
+  color: #fff;
+}
+
+
+.more-info-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.more-info-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* ///////////////////////////////// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 10;
+}
+
+.logo img {
+  width: 150px;
+   height: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+   flex: 1; /* allows centering */
+  justify-content: center;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  margin: 0 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00aaff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("../assets/TunewaveBG.svg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* moved hero content slightly up */
+  align-items: center;
+  text-align: center;
+  padding-top: 100px; /* adjust vertical position */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 10px 20px;
+  margin-bottom: 40px; /* decreased gap between content and footer */
+}
+
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  
+}
+
+.hero-content h1 span {
+  background: linear-gradient(20.95deg, #0B639A 16.34%, #C3C3C3 37.16%);
+   -webkit-background-clip: text; /* Required for Chrome, Safari */
+    background-clip: text;
+    color: transparent;
+  
+}
+.hero-content p {
+    
+    font-size: 1rem; 
+    line-height: 1.5;
+    margin-top: 20px; 
+    
+    
+    width: 587px; 
+   
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-content strong {
+    /* Style for the strong text, as shown in the image */
+    font-weight: 600;
+    background: linear-gradient(20.95deg, #0B639A 16.34%, #C3C3C3 37.16%);
+   -webkit-background-clip: text; /* Required for Chrome, Safari */
+    background-clip: text;
+    color: transparent;
+}
+
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  background-color: #00aaff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0088cc;
+}
+
+.btn.outline {
+  background:transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.outline:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Hero Footer */
+.hero-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-footer .brand img {
+  margin-bottom: 60px;
+    width: 588.1738891601562px;
+    height: 73.52173614501953px;
+    top: 11.61px;
+    left: 77.39px;
+
+opacity: 1;
+
+}
+
+.hero-footer .socials {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 50px;
+  margin-left: 124px;
+}
+
+.hero-footer .socials a i {
+  color: #fff;
+  margin-right: 10px;
+}
+
+
+.hero-footer .socials a {
+  color: rgba(218, 220, 224, 1);
+  font-size: 2rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.hero-footer .socials a:hover {
+  color: #253e90;
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .hero-footer .socials a {
+    font-size: 1.6rem;
+  }
+}
+
+.hero-footer .socials p {
+    font-family: 'Poppins', sans-serif; /* match the rest of your site */
+    font-weight: 400;                   /* thin */
+    font-style: normal;                 /* regular style */
+    font-size: 1rem;                    /* ~16px */
+    line-height: 1.5rem;                /* ~24px */
+    letter-spacing: 0;
+    vertical-align: middle;
+    color: #fff;                        /* visible over dark bg */
+    background: none;                    /* remove gray background */
+    margin-right: 10px;
+}
+
+
+#starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind everything */
+}
+.hero-content, .hero-footer, .overlay {
+  position: relative;
+  z-index: 2; /* on top of canvas */
+}
+
+
+.logo-subtext {
+  position: absolute;
+  top: 100px;       /* Adjust this value */
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}

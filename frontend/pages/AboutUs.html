@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunewave | Full Page</title>
+<!-- Font Awesome Icons -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Manrope:wght@400;500;700&family=DM+Sans:wght@400&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+ <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/Aboutus.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css"/>
+</head>
+<body>
+
+
+
+<div class="navbar-container">
+  <div class="navbar">
+    <div class="logo">
+      <img src="../assets/TunewaveLOGO.svg" alt="TuneWave Logo">
+    </div>
+
+    <div class="nav-links">
+      <a href="Future.html" >Future</a>
+      <a href="Solutions.html">Solutions</a>
+      <a href="Pricing.html">Pricing</a>
+      <a href="AboutUs.html" class="active">About Us</a>
+       <a href="Contact Us.html" >Contact Us</a>
+    </div>
+
+   <a href="#" class="glass-button" id="openDemo">
+  More info <span>→</span>
+</a>
+
+  </div>
+</div>
+<!-- ====== Popup Form Overlay ====== -->
+<div class="demo-overlay" id="demoOverlay">
+  <div class="demo-popup">
+    <span class="close-btn" id="closeDemo">&times;</span>
+    <h2>Book a Demo</h2>
+    <p>Please complete this form and submit your inquiry. Our team of specialists will review the information you provided to offer you the most suitable solution.</p>
+
+    <form class="demo-form">
+      <div class="form-group">
+        <label>First Name *</label>
+        <input type="text" placeholder="Enter first name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name *</label>
+        <input type="text" placeholder="Enter last name" required>
+      </div>
+
+      <div class="form-group">
+        <label>E-mail address *</label>
+        <input type="email" placeholder="Enter email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Country *</label>
+        <input type="text" placeholder="Enter your country" required>
+      </div>
+
+      <div class="form-group">
+        <label>City *</label>
+        <select required>
+          <option value="">Select a city</option>
+          <option>Madrid</option>
+          <option>Barcelona</option>
+          <option>Valencia</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Company Name *</label>
+        <input type="text" placeholder="Enter company name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Website or Social Media *</label>
+        <input type="url" placeholder="Enter link" required>
+      </div>
+
+      <div class="form-group">
+        <label>Type of music business *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Label</option>
+          <option>Publisher</option>
+          <option>Distributor</option>
+          <option>Artist Manager</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Merlin member *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Catalog size *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Less than 100 tracks</option>
+          <option>100–1,000 tracks</option>
+          <option>1,000–10,000 tracks</option>
+          <option>10,000+ tracks</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea placeholder="Brief description of the catalog" required></textarea>
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox"> Sign me up for the official newsletter</label>
+        <label><input type="checkbox" required> I accept the privacy policy</label>
+      </div>
+
+      <p class="data-info">
+        <strong>Data protection information:</strong><br>
+        Data controller: TUNEWAVE.IN<br>
+        Purpose: Manage your request.<br>
+        Rights: You can exercise your data protection rights by sending an email to 
+        <a href="mailto:hello@tunewave.in">hello@tunewave.in</a><br>
+        More info: <a href="https://sonosuite.com/privacy-policy" target="_blank">Privacy Policy</a>
+      </p>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- External JS -->
+<script src="../js/navbar.js"></script>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <canvas id="starfield"></canvas>
+
+  <div class="hero-content">
+    <h1 class="hero-heading">Who We Are</h1>
+    <p class="hero-subtext">
+     We help artists and music businesses grow by providing the right tools.<br>guidance, and support to distribute their music globally, track royalties,<br> and reach the right audience — all under their own brand.
+    </p>
+
+   <a href="#" class="outline-button">
+  More Info
+</a>
+  </div>
+
+</section>
+
+<!-- Hero Scroll Indicator -->
+<div class="scroll-indicator">
+  <div class="mouse">
+    <div class="wheel"></div>
+  </div>
+  <div class="down-arrow">&#8595;</div>
+</div>
+
+
+ <!-- Smooth Ellipse Transition -->
+<div class="ellipse-transition">
+  <img src="../assets/Ellipse 59.png" alt="Smooth Ellipse" class="ellipse-img" />
+</div>
+
+<section class="about-section">
+  <div class="about-left">
+    <h2>About <span>Us</span></h2>
+    <p>
+      At Tunewave Label, we are dedicated to empowering artists and music businesses 
+      with the best tools, features, and support. Our mission is to help creators 
+      clarify their goals, stay consistent in their ambitions, and grow confidently 
+      in their musical journey.
+    </p>
+    <button class="about-btn">More Info →</button>
+  </div>
+
+  <div class="about-right">
+    <div class="stat-top">
+      <div class="stat-box">
+        <h3>5+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat-box">
+        <h3>95+</h3>
+        <p>Labels</p>
+      </div>
+    </div>
+    <div class="stat-box bottom">
+      <h3>1000+</h3>
+      <p>Happy Customers</p>
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+</section>
+
+<div class="ornament-divider-right">
+  <img src="../assets/Group 471.png" alt="Decorative Shape" class="ornament-right">
+</div>
+
+
+<section class="who-section">
+  <div class="who-header">
+    <h2 class="who-title"><span>WHO</span> WE ARE</h2>
+    <p class="who-subtext">
+      Tunewave Label is a platform dedicated to helping artists and music businesses distribute their music, achieve their goals, and reach the right audience with confidence.
+    </p>
+  </div>
+
+  <div class="who-content">
+    <div class="who-item">
+      <div class="line teal"></div>
+      <div class="who-text">
+        <h3>EMPOWER<br>ARTISTS</h3>
+        <p>We help creators clarify their goals, stay consistent, and build confidence throughout their musical journey.</p>
+      </div>
+    </div>
+
+    <div class="who-item">
+      <div class="line blue"></div>
+      <div class="who-text">
+        <h3>GLOBAL<br>DISTRIBUTION</h3>
+        <p>Deliver your music to major streaming platforms while retaining full control and ownership of your content.</p>
+      </div>
+    </div>
+
+    <div class="who-item">
+      <div class="line purple"></div>
+      <div class="who-text">
+        <h3>GUIDANCE &<br>SUPPORT</h3>
+        <p>Our team provides expert guidance, strategy, and hands-on support to ensure your music reaches the right audience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="features-section">
+  <div class="features-container">
+    <!-- Image on Left -->
+    <div class="features-image">
+      <img src="../assets/about.jpg.jpg" alt="Features Image" />
+    </div>
+
+    <!-- Text on Right -->
+    <div class="features-text">
+      <h2>Features</h2>
+      <p class="features-subtext">
+        We are always working to provide you best of the features in all aspects.
+      </p>
+      <p class="features-description">
+        At Tunewave Label the chief determination is to clear the minds of our artists about their goals,
+        while making them consistent in their ambitions and pushing them to be confident on their journey in the music industry.
+        <br><br>
+        You will find every little thing on the internet in just a click of a hand,
+        but here we admire that without knowledge and practice, the internet may even fail you in your musical career.
+      </p>
+
+      <button class="more-info-btn">More Info →</button>
+    </div>
+
+  </div>
+</section>
+<div class="ornament-divider">
+  <img src="../assets/Ornament 81.png" alt="Left Ornament" class="ornament-left">
+</div>
+
+
+
+
+<section class="faq-section">
+  <h2 class="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+  <div class="faq-columns">
+    <div class="faq-column">
+      <div class="faq-item">
+        <div class="faq-question">
+          How does Tunewave’s white-label music distribution solution work?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Tunewave lets music businesses run their own branded distribution service. You can deliver music to global streaming platforms, manage royalties, and control channels—all under your own brand.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Is Tunewave suitable for all music genres?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, Tunewave supports all music genres.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Does Tunewave handle royalties?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, Tunewave provides royalty management for all distributed music.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do I retain ownership of my music?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Absolutely. You retain full ownership of your music.
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-column">
+      <div class="faq-item">
+        <div class="faq-question">
+          Who can use Tunewave Label?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Independent artists, small labels, and music distributors who want to manage and grow their music business.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I get started?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          You can sign up on our platform and start distributing music immediately.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Can Tunewave help with marketing?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, we offer marketing support to promote your music globally.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Does Tunewave offer support after launch?
+          <span class="faq-arrow">▼</span>
+        </div>
+        <div class="faq-answer">
+          Yes, our support team is available to help you anytime.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JS Files -->
+  <script src="../js/main.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/Untitled-2.js"></script>
+
+
+
+
+<section class="footer-info-section">
+  <div class="footer-info-container">
+
+    <!-- Column 1: Logo + About + Socials -->
+    <div class="footer-col">
+      <img src="../assets/TunewaveLOGO.svg" alt="Tunewave Logo" class="footer-logo">
+      <p class="footer-description">
+        TuneWave is a modern music label platform that helps labels manage catalogs,
+        distribute globally, track royalties, and grow with ease.
+      </p>
+
+      <div class="footer-socials">
+        <p>Follow us</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <a href="#">Future</a>
+      <a href="#">Solutions</a>
+      <a href="#">Pricing</a>
+      <a href="#">About Us</a>
+      <a href="#">YouTube ID</a> <a href="../pages/Future.html">Future</a>
+      <a href="../pages/Solutions.html">Solutions</a>
+      <a href="../pages/Pricing.html">Pricing</a>
+      <a href="../pages/AboutUs.html">About Us</a>
+      <a href="../pages/youtube.html">YouTube ID</a>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col">
+      <p class="footer-heading">Contact Us</p>
+      <p class="footer-contact">+91 86887 31210</p>
+
+      <p class="footer-heading">Address</p>
+      <p class="footer-address">
+        Registered Office (H.O)<br>
+        A4, Chandrasekaran Avenue, 1st Main Rd,<br>
+        Thoraipakkam, Chennai<br>
+        Tamil Nadu 600097
+      </p>
+    </div>
+
+    <!-- Column 4: Request Info -->
+    <div class="footer-col footer-right">
+      <p class="footer-heading">Powering Labels, Artists & Creativity</p>
+      <h2 class="footer-title">Request More Information</h2>
+      <p class="footer-description">
+        TuneWave is a dynamic music label that is redefining the way artists share and experience music.
+      </p>
+      <button class="footer-more-info-btn">More info →</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 TuneWave All Rights Reserved</p>
+    <div class="footer-bottom-links">
+       <a href="../pages/terms.html">Terms</a>
+     <a href="../pages/privacy.html">Privacy</a>
+      <a href="../pages/cookies.html">Cookies</a>
+    </div>
+    <p>VSKR TUNEWAVE MUSIC LLP</p>
+  </div>
+</section>
+
+
+
+</body>
+</html>
+

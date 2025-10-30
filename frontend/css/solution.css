@@ -1,0 +1,637 @@
+/* ===============================
+   GLOBAL RESET
+=============================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #000; /* keep solid black background only */
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* ✅ prevents horizontal scroll */
+}
+
+
+/* ===============================
+   HERO SECTION WITH BG IMAGE + STARS
+=============================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("../assets/sol1.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Canvas Stars Overlay */
+.hero canvas#starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 20px;
+}
+
+.hero-heading {
+  font-size: 70px;
+  font-weight: 700;
+/*  text-transform: uppercase;*/
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  background: linear-gradient(33.64deg, #0B639A 18.98%, #C3C3C3 40%, #FFFFFF 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #E0E0E0;
+  margin-bottom: 35px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outline-button {
+  display: inline-block;
+  padding: 12px 40px;
+  font-size: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(4px);
+}
+
+/* Hover Effect */
+.outline-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Wrapper for ornament + ellipse */
+.hero-ellipse-wrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;       /* only this height will be visible */
+  margin-top: -80px;   /* overlap with hero for smooth blend */
+  overflow: hidden;    /* hides the bottom part of the ellipse */
+}
+
+/* Ellipse styling */
+.hero-ellipse {
+  position: absolute;
+  top: 40px; /* moved down from -30px */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.95;
+  z-index: 1;
+}
+
+
+
+/* Wrapper for ornament + ellipse */
+.hero-ellipse-wrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;       /* visible height */
+  margin-top: -80px;   /* overlap hero */
+  overflow: visible;   /* allow top curve to show */
+}
+
+/* Ellipse Divider */
+.hero-ellipse {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 1;          /* lower than ornament */
+  position: relative;  /* ensure proper stacking */
+}
+
+/* Ornament positioning */
+.hero-ornament {
+  position: absolute;
+  left: 0;            /* left side */
+  top: calc(100% - 150px); /* adjust overlap with hero */
+  width: 200px;       /* adjust size */
+  height: auto;
+  z-index: 2;         /* above the ellipse */
+  pointer-events: none;
+}
+
+
+
+
+/*Features Section*/
+  .features {
+  padding: 80px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;             /* above ellipse */
+  margin-top: -120px;      /* negative margin to pull it on top of ellipse */
+  position: relative;
+}
+
+
+  .features-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+    width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
+
+  /* Floating animation keyframes */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Feature box base style */
+.feature-box {
+  width: 449px;
+  min-height: 550px;
+  border-radius: 20px;
+  padding: 60px 40px;
+  background: linear-gradient(156.07deg, #0B0E29 49.66%, #2C4088 78.04%);
+  box-shadow: 0px -8px 32px rgba(18, 120, 187, 0.4) inset,
+              0px 0px 12px rgba(220, 159, 159, 0.08) inset,
+              0px 53px 15px rgba(18, 120, 187, 0.01),
+              0px 2px 5px rgba(18,120,187,0.39);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+
+  /* Animation for floating effect */
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect: move + color shift + shadow pop */
+.feature-box:hover {
+  transform: translateY(-15px) translateX(5px) scale(1.02); /* move + slight enlarge */
+  background: linear-gradient(156.07deg, #1A1F3F 49.66%, #3A57A0 78.04%); /* subtle color change */
+  box-shadow: 0px 15px 35px rgba(18, 120, 187, 0.6),
+              0px -8px 32px rgba(18, 120, 187, 0.4) inset,
+              0px 0px 12px rgba(220, 159, 159, 0.08) inset,
+              0px 53px 15px rgba(18, 120, 187, 0.01);
+  animation: none; /* stop float animation on hover for direct control */
+}
+
+  .feature-box h2 { font-size: 36px; margin-bottom: 20px; }
+  .feature-box p { font-size: 18px; line-height: 1.9; }
+
+  .middle-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .middle-button-wrapper button {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    background: radial-gradient(231.94% 231.94% at 50% 100%, #1278BB 0%, rgba(114,109,145,0) 17.79%);
+    box-shadow:
+      0px -8px 32px rgba(18,120,187,0.4) inset,
+      0px 0px 12px rgba(220,159,159,0.08) inset,
+      0px 53px 15px rgba(18,120,187,0.01),
+      0px 2px 5px rgba(18,120,187,0.39);
+  }
+  .middle-button-wrapper button:hover { transform: translateY(-2px); }
+
+  
+
+.mcn-service {
+  width: 100%;
+  padding: 80px 40px; /* slightly reduced padding */
+  display: flex;
+  justify-content: center; /* center both columns evenly */
+  align-items: center;
+  gap: 40px; /* reduced from 80px */
+}
+
+.mcn-content {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateX(5px); /* move content slightly right */
+}
+
+.mcn-service h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mcn-content p {
+  line-height: 1.7;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.more-info-btn {
+  background: linear-gradient(90deg, #0a2a3a, #0a4d72);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 28px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 20px rgba(18, 120, 187, 0.4);
+}
+
+.more-info-btn:hover {
+  background: linear-gradient(90deg, #1278BB, #0aa2f6);
+}
+
+/* IMAGE SECTION */
+.mcn-image-wrapper {
+  position: relative;
+  display: inline-block;
+  transform: translateX(-30px); /* move image slightly left */
+}
+
+#mcn-image {
+  width: 600px;
+  height: 350px; /* fixed height for all images */
+  object-fit: cover; /* crops edges to fill area cleanly */
+  border-radius: 20px;
+  transition: opacity 1s ease-in-out;
+}
+
+
+/* Overlapping Arrows */
+.arrow-wrapper {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 20px;
+  box-shadow: 0 0 20px rgba(18, 120, 187, 0.4);
+}
+
+.arrow {
+  font-size: 22px;
+  color: #fff;
+  background: #000;
+  border: 1px solid #1278BB;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+  background: #1278BB;
+  color: #fff;
+}
+
+.left-stick {
+  position: relative;
+  width: 100%;
+  height: 0; /* no extra space in layout */
+}
+
+.left-stick img {
+  position: absolute;
+  left: 0;
+  top: -120px; /* moved slightly up */
+  width: 250px; /* increased size */
+  height: auto;
+  z-index: 5;
+  transform: translateX(-20px);
+  filter: brightness(1.6) drop-shadow(0 0 15px rgba(255, 255, 255, 0.25)); /* makes it glow & brighter */
+  opacity: 0.95; /* keeps a natural look */
+  transition: all 0.3s ease;
+}
+
+
+
+
+.ribbon-section {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* reduced width */
+  height: auto; /* maintain aspect ratio */
+  transform: translate(-50%, -50%);
+  object-fit: contain; /* fits the image nicely */
+  opacity: 0.9;
+  z-index: 0;
+}
+
+#ribbonCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.ribbon-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  top: -45px; /* moves heading & paragraph upward */
+}
+
+
+.ribbon-content h1 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.ribbon-content p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.tune-btn {
+  display: inline-block;
+  background: #fff;
+  color: #007bff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.tune-btn:hover {
+  background: #007bff;
+  color: #fff;
+}
+
+
+ /* Group 421 decorative image */
+.group-graphic {
+  position: absolute;
+  right: -100px;
+  top: 10%; /* adjust vertical position */
+  transform: translateY(-50%);
+  width: 280px; /* reduced from 420px */
+  z-index: 1;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+
+/* Distribute Section */
+.distribute-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  width: 1200px;
+  margin: -60px auto 100px; /* moved up and blended */
+  padding: 80px 60px;
+  border-radius: 25px;
+  background: none;
+  box-shadow: none;
+  z-index: 2; /* keep above the group graphic */
+}
+
+/* Insights Box — enlarge & push slightly over the group graphic */
+.insights-box {
+  flex: 1;
+  background: rgba(255,255,255,0.03);
+  border-radius: 25px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  box-shadow: inset 0 0 25px rgba(18,120,187,0.3);
+  width: 520px; /* increased width */
+  transform: translateX(60px); /* overlaps towards the group graphic */
+  position: relative;
+  z-index: 3;
+}
+
+
+
+
+  .distribute-content {
+  flex: 1;
+  padding-left: 40px; /* adds breathing room */
+}
+
+.distribute-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.distribute-heading img.star {
+  width: 32px;
+  height: 32px;
+}
+
+.distribute-heading span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #8ABFFF;
+  letter-spacing: 0.5px;
+}
+
+.distribute-content h1 {
+  font-size: 54px;
+  line-height: 1.1;
+  margin: 15px 0 25px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.distribute-content p {
+  color: #B5C6E0;
+  font-size: 20px;
+  line-height: 1.8;
+  max-width: 550px;
+}
+
+  .insights-box {
+  flex: 1;
+  background: none; /* ✅ no translucent layer */
+  right:-80px;
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: none; /* ✅ remove blur */
+  box-shadow: none; /* ✅ remove inner glow */
+}
+
+  .insights-box img { width: 100%; border-radius: 20px; margin-bottom: 20px; }
+  .insights-box h3 { font-size: 22px; color: #b9c7df; }
+  .insights-box p { color: #ccc; font-size: 16px; }
+
+  
+
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .features-content { flex-direction: column; gap: 40px; }
+    .footer-info-container { flex-direction: column; gap: 40px; align-items: center; }
+    .footer-left, .footer-middle, .footer-right { flex: unset; text-align: center; }
+    .footer-middle { flex-direction: column; gap: 20px; }
+    .footer-subheading { font-size: 32px; }
+  }
+
+
+
+
+  #starfield {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* behind hero content */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* in front of canvas */
+}
+
+
+/* ===============================
+   SCROLL INDICATOR (Mouse + Arrow)
+=============================== */
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(calc(-50% + 1px)); /* shifted 2px right */
+  bottom: 50px; /* adjust if needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+
+/* Mouse outline */
+.scroll-indicator .mouse {
+  width: 28px;
+  height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  padding-top: 6px;
+}
+
+/* Inner moving wheel */
+.scroll-indicator .wheel {
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  border-radius: 2px;
+  animation: wheelMove 1.5s infinite;
+  opacity: 0.8;
+}
+
+/* Down arrow */
+.scroll-indicator .down-arrow {
+  font-size: 22px;
+  color: #fff;
+  animation: bounceArrow 2s infinite;
+  opacity: 0.8;
+}
+
+/* Wheel animation */
+@keyframes wheelMove {
+  0% { transform: translateY(0); opacity: 0.8; }
+  50% { transform: translateY(8px); opacity: 0.3; }
+  100% { transform: translateY(0); opacity: 0.8; }
+}
+
+/* Arrow bounce animation */
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Optional smooth fade-in */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 20px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
