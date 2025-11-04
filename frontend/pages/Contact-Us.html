@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | TuneWave</title>
+  <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/future.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/footer.css"/>
+</head>
+<body>
+
+    <div class="navbar-container">
+  <div class="navbar">
+    <div class="logo">
+      <img src="../assets/TunewaveLOGO.svg" alt="TuneWave Logo">
+    </div>
+
+    <div class="nav-links">
+      <a href="Future.html" >Future</a>
+      <a href="Solutions.html">Solutions</a>
+      <a href="Pricing.html" >Pricing</a>
+      <a href="AboutUs.html" >About Us</a>
+       <a href="Contact Us.html" class="active" >Contact Us</a>
+
+    </div>
+
+    <a href="#" class="glass-button" id="openDemo">
+  More info <span>→</span>
+</a>
+  </div>
+</div>
+
+
+<!-- ====== Popup Form Overlay ====== -->
+<div class="demo-overlay" id="demoOverlay">
+  <div class="demo-popup">
+    <span class="close-btn" id="closeDemo">&times;</span>
+    <h2>Book a Demo</h2>
+    <p>Please complete this form and submit your inquiry. Our team of specialists will review the information you provided to offer you the most suitable solution.</p>
+
+    <form class="demo-form">
+      <div class="form-group">
+        <label>First Name *</label>
+        <input type="text" placeholder="Enter first name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name *</label>
+        <input type="text" placeholder="Enter last name" required>
+      </div>
+
+      <div class="form-group">
+        <label>E-mail address *</label>
+        <input type="email" placeholder="Enter email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Country *</label>
+        <input type="text" placeholder="Enter your country" required>
+      </div>
+
+      <div class="form-group">
+        <label>City *</label>
+        <select required>
+          <option value="">Select a city</option>
+          <option>Madrid</option>
+          <option>Barcelona</option>
+          <option>Valencia</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Company Name *</label>
+        <input type="text" placeholder="Enter company name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Website or Social Media *</label>
+        <input type="url" placeholder="Enter link" required>
+      </div>
+
+      <div class="form-group">
+        <label>Type of music business *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Label</option>
+          <option>Publisher</option>
+          <option>Distributor</option>
+          <option>Artist Manager</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Merlin member *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Catalog size *</label>
+        <select required>
+          <option value="">Select one...</option>
+          <option>Less than 100 tracks</option>
+          <option>100–1,000 tracks</option>
+          <option>1,000–10,000 tracks</option>
+          <option>10,000+ tracks</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea placeholder="Brief description of the catalog" required></textarea>
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox"> Sign me up for the official newsletter</label>
+        <label><input type="checkbox" required> I accept the privacy policy</label>
+      </div>
+
+      <p class="data-info">
+        <strong>Data protection information:</strong><br>
+        Data controller: TUNEWAVE.IN<br>
+        Purpose: Manage your request.<br>
+        Rights: You can exercise your data protection rights by sending an email to 
+        <a href="mailto:hello@tunewave.in">hello@tunewave.in</a><br>
+        More info: <a href="https://sonosuite.com/privacy-policy" target="_blank">Privacy Policy</a>
+      </p>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+<!-- External JS -->
+<script src="../js/navbar.js"></script>
+
+
+  <!-- =========================
+     CONTACT PAGE TITLE
+========================== -->
+<section class="contact-header">
+  <h2 class="page-title">Contact Us</h2>
+  <p class="subtitle">We’d love to hear from you. Reach out with any questions or feedback!</p>
+</section>
+
+<!-- =========================
+     CONTACT FORM SECTION
+========================== -->
+<section class="contact-form-section">
+  <div class="contact-container">
+    <form>
+      <label>Full Name:</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Email Address:</label>
+      <input type="email" placeholder="Enter your email address" required>
+
+      <label>Mobile Number:</label>
+      <input type="tel" placeholder="Enter your mobile number" required>
+
+      <label>Subject:</label>
+      <input type="text" placeholder="Enter subject" required>
+
+      <label>Your Message:</label>
+      <textarea placeholder="Write your message here..." rows="5" required></textarea>
+
+      <div class="btn-container">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- =========================
+     INFO SECTION (Place + Email)
+========================== -->
+<section class="contact-info-section">
+  <div class="info-section">
+    <div class="info-box">
+      <label>📍 Place:</label>
+      <input type="text" value="Hyderabad, Telangana, India" readonly>
+    </div>
+
+    <div class="info-box">
+      <label>📧 Email:</label>
+      <input type="text" value="hello@tunewave.in" readonly>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     MAP SECTION
+========================== -->
+<section class="contact-map-section">
+  <div class="map-container">
+    <!-- Hyderabad Office -->
+    <iframe 
+      src="https://www.google.com/maps?q=F209,+Ram's+Enclave,+Near+Metro+Pillar+A974,+Erragadda,+Hyderabad,+Telangana+500018&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+    <!-- Chennai Office -->
+    <iframe 
+      src="https://www.google.com/maps?q=A4,+Chandrasekaran+Avenue,+1st+Main+Rd,+Thoraipakkam,+Chennai,+Tamil+Nadu+600097&output=embed"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+
+  <section class="footer-info-section">
+  <div class="footer-info-container">
+
+    <!-- Column 1: Logo + About + Socials -->
+    <div class="footer-col">
+      <img src="../assets/TunewaveLOGO.svg" alt="Tunewave Logo" class="footer-logo">
+      <p class="footer-description">
+        TuneWave is a modern music label platform that helps labels manage catalogs,
+        distribute globally, track royalties, and grow with ease.
+      </p>
+
+      <div class="footer-socials">
+        <p>Follow us</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-col">
+      <a href="../pages/Future.html">Future</a>
+      <a href="../pages/Solutions.html">Solutions</a>
+      <a href="../pages/Pricing.html">Pricing</a>
+      <a href="../pages/AboutUs.html">About Us</a>
+      <a href="../pages/youtube.html">YouTube ID</a>
+    </div>
+
+    <!-- Column 3: Contact Info -->
+    <div class="footer-col">
+      <p class="footer-heading">Contact Us</p>
+      <p class="footer-contact">+91 86887 31210</p>
+
+      <p class="footer-heading">Address</p>
+      <p class="footer-address">
+        Registered Office (H.O)<br>
+        A4, Chandrasekaran Avenue, 1st Main Rd,<br>
+        Thoraipakkam, Chennai<br>
+        Tamil Nadu 600097
+      </p>
+    </div>
+
+    <!-- Column 4: Request Info -->
+    <div class="footer-col footer-right">
+      <p class="footer-heading">Powering Labels, Artists & Creativity</p>
+      <h2 class="footer-title">Request More Information</h2>
+      <p class="footer-description">
+        TuneWave is a dynamic music label that is redefining the way artists share and experience music.
+      </p>
+      <button class="footer-more-info-btn">More info →</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>© 2025 TuneWave All Rights Reserved</p>
+    <div class="footer-bottom-links">
+      <a href="../pages/terms.html">Terms</a>
+     <a href="../pages/privacy.html">Privacy</a>
+      <a href="../pages/cookies.html">Cookies</a>
+    </div>
+    <p>VSKR TUNEWAVE MUSIC LLP</p>
+  </div>
+</section>
+
+
+</body>
+</html>
