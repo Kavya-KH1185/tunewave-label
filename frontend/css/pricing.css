@@ -117,7 +117,7 @@ html, body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: -360px; /* ⬇️ moved slightly down from -420px */
+  margin-top: -360px; /* keep same or adjust slightly if needed */
   z-index: 3;
 }
 
@@ -125,7 +125,7 @@ html, body {
   width: 100%;
   display: block;
   object-fit: cover;
-  transform: translateY(40%); /* ⬇️ shows a little more of the ellipse */
+  transform: translateY(45%); /* ⬇️ moved further down from 40% */
 }
 
 /* ===============================
