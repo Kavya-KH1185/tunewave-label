@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
-  }, 6000);
+  }, 2000);
 
   showSlide(current);
 });

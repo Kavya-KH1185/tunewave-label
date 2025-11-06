@@ -1,62 +1,80 @@
+/* Global Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #fff; /* default text color */
+  margin: 0;
+  padding: 80px 40px; /* pushes content down */
+  background: #0b122b; /* dark navy background */
+}
 
-   body {
-      font-family: "Poppins", sans-serif;
-      line-height: 1.6;
-      color: #fff;
-      margin: 0;
-      padding: 80px 40px; /* pushes content down */
-      background: #0b122b; /* navy blue background */
-    }
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; /* all headings in white */
+  margin-top: 20px;
+}
 
-    h1, h2, h3 {
-      color: #fff;
-    }
+/* Specific heading styles */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
 
-    h1 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
-    }
+h2 {
+  font-size: 22px;
+  border-left: 4px solid #5C7CE6;
+  padding-left: 10px;
+  margin-top: 30px;
+}
 
-    h2 {
-      margin-top: 30px;
-      font-size: 22px;
-      color: #fff;
-      border-left: 4px solid #5C7CE6;
-      padding-left: 10px;
-    }
+h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
 
-    h3 {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #444;
-    }
+/* Paragraphs */
+p {
+  margin: 10px 0;
+  color: #fff; /* ensure white text */
+}
 
-    p {
-      margin: 10px 0;
-    }
+/* Lists */
+ul, ol {
+  margin-left: 20px;
+  color: #fff; /* list items white */
+}
 
-    ul {
-      margin-left: 20px;
-    }
+/* Links */
+a {
+  color: #5C7CE6; /* blue links */
+  text-decoration: none;
+}
 
-    .privacy-container {
-      max-width: 1000px;
-      margin: auto;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
-    }
+/* Container */
+/* Container */
+.privacy-container {
+  max-width: 1000px;
+  margin: auto;
+  padding-bottom: 60px; /* add space at the end of section */
+}
 
-    a {
-      color: #5C7CE6;
-      text-decoration: none;
-    }
 
-    a:hover {
-      text-decoration: underline;
-    }
+/* Forms */
+input, select, textarea, button {
+  color: #000; /* form text dark for readability */
+}
+
+/* Optional: Add spacing between sections */
+.privacy-container > h2, 
+.privacy-container > h3, 
+.privacy-container > p, 
+.privacy-container > ul {
+  margin-bottom: 15px;
+}
+
+

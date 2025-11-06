@@ -242,6 +242,7 @@ outline-button:hover {
   to { transform: translateX(0); }
 }
 
+
 .empower-section {
   /*background: radial-gradient(90% 120% at 10% 20%, #0a001a 0%, #030011 100%);*/
   color: #fff;
@@ -425,9 +426,9 @@ outline-button:hover {
 /* Responsive */
 @media (max-width: 1024px) {
   .empower-slider {
-    flex-direction: column;
-    text-align: center;
-  }
+  animation: slideEmpower 5s linear infinite; /* 🔥 faster speed (10s) */
+}
+
   .empower-content, .empower-image-container {
     width: 100%;
   }
