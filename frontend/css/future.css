@@ -202,44 +202,39 @@ outline-button:hover {
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
-  position: relative;
-  z-index: 4;
-  transform: translateY(-20px);
   display: flex;
   flex-direction: column;
-  gap: 60px; /* ⬅️ increased vertical gap between two marquee lines */
+  gap: 60px; /* space between lines */
 }
 
 .marquee {
   display: flex;
-  gap: 60px; /* ⬅️ horizontal gap between logos */
+  gap: 60px;
   width: max-content;
-  animation: scrollLeft 10s linear infinite;
+  animation: scrollLeft 15s linear infinite;
   align-items: center;
 }
 
 .marquee.reverse {
-  animation: scrollRight 10s linear infinite;
+  animation: scrollRight 15s linear infinite;
 }
 
 .marquee img {
   height: 50px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: screen;
-  filter: brightness(1.2) contrast(1.2);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Animations */
+/* Continuous scroll animations */
 @keyframes scrollLeft {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move half the content (because duplicated) */
 }
 
 @keyframes scrollRight {
-  from { transform: translateX(-50%); }
-  to { transform: translateX(0); }
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 
@@ -271,8 +266,6 @@ outline-button:hover {
   margin-bottom: 50px;
   max-width: 600px;
 }
-
-
 
 /* Slider Layout */
 .empower-slider {
@@ -336,7 +329,6 @@ outline-button:hover {
   box-shadow: 0 0 100px rgba(0, 255, 234, 0.5);
 }
 
-
 /* Play Circle (Base Style) */
 .play-circle {
   position: absolute;
@@ -386,21 +378,6 @@ outline-button:hover {
   opacity: 0.6;
 }
 
-/* Arrows 
-.empower-arrows {
-  position: absolute;
-  bottom: -50px;
-  right: 10%;
-  display: flex;
-  gap: 25px;
-  font-size: 35px;
-  color: #888;
-  cursor: pointer;
-}
-
-.empower-arrows span:hover {
-  color: #00ffe0;
-}*/
 
 /* Music Icon Overlap */
 .music-icon {
@@ -436,7 +413,6 @@ outline-button:hover {
     display: none;
   }
 }
-
 
 /* ===============================
    GLOBAL MUSIC DISTRIBUTION SECTION (PERFECTLY BALANCED LAYOUT)
