@@ -139,85 +139,148 @@
 </div>
 
 
-<!-- External JS -->
+<!-- External JS 
 <script src="../js/navbar.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>-->
 
 
   <!-- =========================
-     CONTACT PAGE TITLE
+     CONTACT PAGE HEADER
 ========================== -->
-<section class="contact-header">
-  <h2 class="page-title">Contact Us</h2>
-  <p class="subtitle">We’d love to hear from you. Reach out with any questions or feedback!</p>
+<section class="contact-hero">
+  <canvas id="starfield"></canvas>
+  <div class="overlay"></div>
+  <div class="contact-content">
+    <!--<h4 class="contact-subtitle">Contact Us</h4>-->
+    <h1 class="contact-title">We’re humans, not bots!</h1>
+    <p class="contact-text">
+      Please fill in the form below if you want to contact us for general inquiries. 
+      Your email won’t end up in an endless hole of messages. 
+      Select a topic that best fits your needs, and write a short description 
+      with a specific request. Our team will get back to you in a “beat”.
+    </p>
+  </div>
+   <a href="#" class="outline-button">
+  More Info
+</a>
+  <div class="half-ellipse"></div>
+
+  <!-- Hero Scroll Indicator -->
+<div class="scroll-indicator">
+  <div class="mouse">
+    <div class="wheel"></div>
+  </div>
+  <div class="down-arrow">&#8595;</div>
+</div>
 </section>
+
+<!-- =========================
+     ORNAMENT DIVIDER
+========================== -->
+<div class="section-ornament">
+  <img src="../assets/Ornament-81.png" alt="Decorative Ornament" />
+
+</div>
 
 <!-- =========================
      CONTACT FORM SECTION
 ========================== -->
 <section class="contact-form-section">
-  <div class="contact-container">
-    <form>
-      <label>Full Name:</label>
-      <input type="text" placeholder="Enter your full name" required>
-
-      <label>Email Address:</label>
-      <input type="email" placeholder="Enter your email address" required>
-
-      <label>Mobile Number:</label>
-      <input type="tel" placeholder="Enter your mobile number" required>
-
-      <label>Subject:</label>
-      <input type="text" placeholder="Enter subject" required>
-
-      <label>Your Message:</label>
-      <textarea placeholder="Write your message here..." rows="5" required></textarea>
-
-      <div class="btn-container">
-        <button type="submit" class="submit-btn">Submit</button>
+  <div class="contact-form-container">
+    <form class="contact-form">
+      <label for="name">Full Name:</label>
+      <div class="input-group">
+        <i class="fa fa-user"></i>
+        <input type="text" id="name" placeholder="Enter your full name" required>
       </div>
+
+      <label for="email">Email Address:</label>
+      <div class="input-group">
+        <i class="fa fa-envelope"></i>
+        <input type="email" id="email" placeholder="Enter your email address" required>
+      </div>
+
+      <label for="phone">Mobile Number:</label>
+      <div class="input-group">
+        <i class="fa fa-phone"></i>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <label for="subject">Subject:</label>
+      <div class="input-group">
+        <i class="fa fa-edit"></i>
+        <input type="text" id="subject" placeholder="Enter subject" required>
+      </div>
+
+      <label for="message">Your Message:</label>
+      <div class="input-group textarea-group">
+        <i class="fa fa-comment"></i>
+        <textarea id="message" placeholder="Write your message here..." rows="5" required></textarea>
+      </div>
+
+      <div class="newsletter">
+        <p>Do you want to stay updated about the latest music industry and technology trends? Subscribe to our newsletter.</p>
+        <div class="radio-group">
+          <label><input type="radio"  name="newsletter" value="no" checked> No, Thanks</label>
+          <label><input type="radio" name="newsletter" value="yes"> Yes, I want to receive the newsletter</label>
+        </div>
+      </div>
+
+      <p class="privacy-text">
+        Information on data protection: Responsible for the treatment is TuneWave. Purpose of the treatment is to manage your request. 
+        To exercise the rights of access, you can email us at <a href="mailto:privacy@tunewave.com">privacy@tunewave.com</a>. 
+        For more information, check our <a href="#">Privacy Policy</a>.
+      </p>
+
+      <button type="submit" class="submit-btn">Submit</button>
     </form>
   </div>
 </section>
 
+<!-- =========================
+     DECORATIVE IMAGE BETWEEN SECTIONS
+========================== -->
+<div class="contact-image">
+ <img src="../assets/Group-471.png" alt="Decorative Ornament" />
+</div>
 
 <!-- =========================
-     INFO SECTION (Place + Email)
+     OFFICE LOCATIONS SECTION
 ========================== -->
-<section class="contact-info-section">
-  <div class="info-section">
-    <div class="info-box">
-      <label>📍 Place:</label>
-      <input type="text" value="Hyderabad, Telangana, India" readonly>
+
+<section class="offices">
+  <div class="brand-name">TUNEWAVE</div>
+
+  <div class="office-locations">
+    <div class="office-column">
+      <h3>Hyderabad</h3>
+      <p>+91 9701159888<br>
+      Address:<br>
+      Metro Pillar A973, Training & Empowerment Division Of V.J.MARCONS PVT LTD, 209, 2nd Floor, Erragadda, Hyderabad, Telangana 500038</p>
     </div>
 
-    <div class="info-box">
-      <label>📧 Email:</label>
-      <input type="text" value="hello@tunewave.in" readonly>
+    <div class="office-column">
+      <h3>Chennai</h3>
+      <p>+91 86887 31210<br>
+      Address:<br>
+      Registered Office (H.O) A4, Chandrasekaran Avenue, 1st Main Rd, Thoraipakkam, Chennai, Tamil Nadu 600097</p>
+    </div>
+
+    <div class="office-column">
+      <h3>Mumbai</h3>
+      <p>+91 9000326739<br>
+      Address:<br>
+      602, Chaitanya CHS LTD, Near Ram Mandir Signal, Goregaon West, Mumbai – 400104</p>
     </div>
   </div>
 </section>
 
+
+
 <!-- =========================
-     MAP SECTION
+     FOOTER SECTION
 ========================== -->
-<section class="contact-map-section">
-  <div class="map-container">
-    <!-- Hyderabad Office -->
-    <iframe 
-      src="https://www.google.com/maps?q=F209,+Ram's+Enclave,+Near+Metro+Pillar+A974,+Erragadda,+Hyderabad,+Telangana+500018&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-
-    <!-- Chennai Office -->
-    <iframe 
-      src="https://www.google.com/maps?q=A4,+Chandrasekaran+Avenue,+1st+Main+Rd,+Thoraipakkam,+Chennai,+Tamil+Nadu+600097&output=embed"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
-
 
   <section class="footer-info-section">
   <div class="footer-info-container">
@@ -291,6 +354,11 @@
 
 <script src="../js/navbar.js"></script>
 <script src="../js/popup.js"></script>
+<!-- External JS -->
+<script src="../js/navbar.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/script.js"></script>
+
 
 </body>
 </html>

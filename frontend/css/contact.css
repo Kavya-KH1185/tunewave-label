@@ -10,154 +10,454 @@ body {
 .footer-info-section {
   margin-top: 120px;
 }
-
 /* ===============================
-   CONTACT HEADER
-=============================== */
-.contact-header {
-  text-align: center;
-  margin-top: 120px; /* Push below navbar */
-  margin-bottom: 50px;
+   CONTACT PAGE | TuneWave
+   =============================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #0a0a0f 0%, #111423 100%);
+  color: #fff;
+  overflow-x: hidden;
 }
 
-.page-title {
+/* -------------------------------
+   HERO SECTION
+-------------------------------- */
+.contact-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('../assets/Subtract.png') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 20px;
+  margin-top: -820px; /* increased from -60px to move higher */
+}
+
+
+.contact-hero .overlay {
+  position: absolute;
+  inset: 0;
+ /* background: rgba(0, 0, 0, 0.55);*/
+}
+
+/*.contact-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 0 20px;
+}*/
+
+.contact-subtitle {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.contact-title {
   font-size: 64px;
-  font-weight: 800;
-  background: linear-gradient(33.64deg, #0B639A 18.98%, #fff 26.46%);
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(319.15deg, #0B639A 18.27%, #FFFFFF 57.16%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 
-.subtitle {
-  font-size: 18px;
-  color: #fff
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+
+.contact-title span {
+  color: #13A89E;
 }
 
-/* ===============================
+.contact-text {
+  font-size: 16px;
+  background: linear-gradient(319.15deg, #0B639A 18.27%, #FFFFFF 57.16%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.outline-button {
+  display: inline-block;
+ /* border: 2px solid #13A89E;*/
+  /*color: #13A89E;*/
+  text-decoration: none;
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.outline-button:hover {
+ /* background: linear-gradient(90.61deg, #1278BB 4.69%, #13A89E 103.09%);*/
+  color: #fff;
+  border: none;
+}
+
+/* -------------------------------
+   SCROLL INDICATOR
+-------------------------------- */
+.scroll-indicator {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 3;
+}
+
+.mouse {
+  width: 25px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin: 0 auto 8px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: scroll 1.5s infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 0; top: 8px; }
+  50% { opacity: 1; top: 15px; }
+  100% { opacity: 0; top: 8px; }
+}
+
+.down-arrow {
+  font-size: 20px;
+ /* color: #13A89E;*/
+}
+
+/* ==============================
+   Half Ellipse Transition Shape
+============================== */
+.half-ellipse {
+  position: absolute;
+  bottom: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130%;
+  height: 250px;
+  background: #0a001a; /* deep black-purple tone like in screenshot */
+  border-radius: 50% 50% 0 0;
+  z-index: 3;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* -------------------------------
    CONTACT FORM SECTION
-=============================== */
+-------------------------------- */
 .contact-form-section {
-  /*background: url('../assets/contactus.jpg') center center/cover no-repeat;*/
   padding: 80px 20px;
+ /* background: linear-gradient(180deg, #0e0e15 0%, #141626 100%);*/
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact-container {
+.contact-form-container {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
   width: 100%;
   max-width: 600px;
+  box-shadow: 0 0 20px rgba(19, 168, 158, 0.15);
+  backdrop-filter: blur(12px);
 }
 
-.contact-container form {
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.input-group {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 10px;
 }
 
-.contact-container input,
-.contact-container textarea {
+.input-group i {
+  color: #13A89E;
+  margin-right: 10px;
+}
+
+.input-group input,
+.input-group textarea {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
 }
 
-.btn-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+.input-group textarea {
+  resize: none;
+}
+
+.newsletter {
+  margin-top: 25px;
+}
+
+.newsletter p {
+  color: #cfcfcf;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.radio-group label {
+  font-size: 14px;
+  margin-right: 15px;
+  color: #bfbfbf;
+}
+
+.radio-group input {
+  accent-color: #13A89E;
+  margin-right: 5px;
+}
+
+.privacy-text {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 25px;
+  line-height: 1.6;
+}
+
+.privacy-text a {
+  color: #13A89E;
+  text-decoration: none;
+}
+
+.privacy-text a:hover {
+  text-decoration: underline;
 }
 
 .submit-btn {
-  background: linear-gradient(92.99deg, #1278BB 3.3%, #13A89E 100%);
+  display: inline-block; /* changed from block so it fits smaller */
+  width: 180px; /* reduce button width */
+  background: linear-gradient(90.61deg, #1278BB 4.69%, #13A89E 103.09%);
   color: #fff;
-  font-size: 16px;
-  font-weight: 600;
   border: none;
-  padding: 12px 28px;
-  border-radius: 50px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 0;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(18, 120, 187, 0.3);
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
 .submit-btn:hover {
-  background: white;
-  color: #1278BB;
-  border: 2px solid #1278BB;
-  box-shadow: 0 0 10px rgba(18, 120, 187, 0.5);
+  opacity: 0.9;
 }
 
-/* ===============================
-   INFO SECTION
-=============================== */
-.contact-info-section {
+
+/* -------------------------------
+   OFFICES SECTION
+-------------------------------- */
+.offices {
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  margin-top: 30px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.info-section {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.info-box {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-label {
-  font-weight: 600;
+  gap: 80px;
+  padding: 100px 60px;
+  text-align: left;
   color: #fff;
+  margin-top: -200px; /* increased upward movement */
 }
 
-input[readonly] {
-  width: 280px;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
-  color: #000;
-  background: #fff; /* 🤍 White background */
-  cursor: default;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+/* Left side - Brand Name */
+.brand-name {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  line-height: 1;
+  background: linear-gradient(270deg, #1278BB, #13A89E, #12B4AA);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 6s ease infinite;
 }
 
-input[readonly]:focus {
-  outline: none;
-  border-color: #13A89E;
-  box-shadow: 0 0 6px rgba(19, 168, 158, 0.3);
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-/* ===============================
-   MAP SECTION
-=============================== */
-.contact-map-section {
+/* Right side - Office Locations */
+.office-locations {
   display: flex;
-  justify-content: center;
-  padding: 40px 0;
-}
-
-.map-container {
-  display: flex;
-  gap: 20px;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 40px;
 }
 
-.map-container iframe {
-  width: 500px;
-  height: 300px;
-  border: 0;
-  border-radius: 10px;
+.office-column {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px 25px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.office-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(19, 168, 158, 0.3);
+}
+
+.office-column h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.office-column p {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .offices {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .brand-name {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .office-locations {
+    justify-content: center;
+  }
+}
+
+
+/* -------------------------------
+   ORNAMENT BETWEEN SECTIONS
+-------------------------------- */
+.section-ornament {
+  position: relative;
+  width: 100%;
+  height: 120px; /* adjust height depending on ornament */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* keeps it left-aligned */
+  margin: -60px 0 40px 0; /* overlaps slightly between sections */
+  overflow: visible;
+  z-index: 3;
+}
+
+.section-ornament img {
+  width: 160px; /* adjust ornament size */
+  height: auto;
+  margin-left: -10px; /* was 60px — reduced to move more left */
+  opacity: 0.8;
+  filter: drop-shadow(0 0 10px rgba(19, 168, 158, 0.4));
+  animation: floatOrnament 6s ease-in-out infinite;
+}
+
+@keyframes floatOrnament {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.contact-image {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 40px 0;
+  position: relative;
+  right: -60px;
+}
+
+.contact-image img {
+  width: 200px;
+  height: auto;
+  border-radius: 12px;
+  margin-right: 60px;
+  margin-top: -160px; /* moves image upward */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.contact-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(19, 168, 158, 0.4);
+}
+
+/* -------------------------------
+   HERO SECTION ANIMATION
+-------------------------------- */
+.contact-hero {
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroFadeIn 1.8s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
