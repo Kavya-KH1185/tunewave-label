@@ -28,7 +28,7 @@ html, body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
               url("../assets/sol1.jpg") no-repeat center center/cover;
   display: flex;
@@ -37,6 +37,7 @@ html, body {
   text-align: center;
   color: #fff;
   overflow: hidden;
+  z-index:-2;
 }
 
 /* Canvas Stars Overlay */
@@ -111,6 +112,7 @@ html, body {
   height: 150px;       /* only this height will be visible */
   margin-top: -80px;   /* overlap with hero for smooth blend */
   overflow: hidden;    /* hides the bottom part of the ellipse */
+  z-index: -1;
 }
 
 /* Ellipse styling */
@@ -123,7 +125,7 @@ html, body {
   height: auto;
   object-fit: cover;
   opacity: 0.95;
-  z-index: 1;
+  /* z-index: -20; */
 }
 
 
@@ -256,6 +258,7 @@ html, body {
   justify-content: center; /* center both columns evenly */
   align-items: center;
   gap: 40px; /* reduced from 80px */
+  /* z-index: 10000; */
 }
 
 .mcn-content {
@@ -584,7 +587,7 @@ html, body {
   position: absolute;
   left: 50%;
   transform: translateX(calc(-50% + 1px)); /* shifted 2px right */
-  bottom: 50px; /* adjust if needed */
+  bottom: 18%; /* adjust if needed */
   display: flex;
   flex-direction: column;
   align-items: center;

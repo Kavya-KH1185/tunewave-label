@@ -120,6 +120,7 @@ img {
 
 .ellipse-transition .ellipse-img {
   width: 100%;
+  margin-top: -5%;
   display: block;
   object-fit: cover;
   transform: translateY(45%); /* ⬇️ moved further down from 40% */
