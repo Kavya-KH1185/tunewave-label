@@ -518,3 +518,149 @@ img {
   opacity: 0.9;
   pointer-events: none;
 }
+
+/* Styles for the price block */
+        .promo-price-gpt {
+            font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            color: #111;
+            display: inline-block;
+            text-align: left;
+            line-height: 1;
+            padding: 6px 8px;
+        }
+
+        /* Top row aligns original and current price on same baseline */
+        .price-top-gpt {
+            display: flex;
+            align-items: baseline;
+            gap: 14px;
+        }
+
+        /* Original price (muted & struck-through) */
+        .original-price-gpt {
+            color: #9aa0a6;
+            /* grey */
+            font-weight: 600;
+            font-size: 20px;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Add thin strike line */
+        .original-price-gpt::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            background: currentColor;
+            width: 100%;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(-6deg);
+            /* slightly tilted like screenshot */
+            opacity: 0.9;
+        }
+
+        /* small rupee before original amount */
+        .currency-small-gpt {
+            font-size: 14px;
+            margin-right: 4px;
+            vertical-align: baseline;
+        }
+
+        /* original numeric */
+        .orig-amount-gpt {
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+
+        /* Current price block */
+        .current-price-gpt {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .price-card-gpt {
+            font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            display: inline-block;
+            text-align: left;
+            color: #fff;
+            padding: 0px;
+            border-radius: 8px;
+            background: transparent;
+            /* change to #fff or another color if you want a card */
+        }
+
+        /* row holding symbol, amount and per-month text */
+        .price-row-gpt {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        /* rupee symbol */
+        .currency-gpt {
+            font-size: 24px;
+            line-height: 1;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            margin-right: 2px;
+        }
+
+        /* main amount */
+        .amount-gpt {
+            font-size: 48px;
+            /* large number like the screenshot */
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+
+        /* small per-month text */
+        .per-gpt {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+            margin-left: 6px;
+            align-self: flex-end;
+            padding-bottom: 6px;
+            /* visually align with amount baseline */
+        }
+
+        /* Responsive tuning */
+        @media (max-width: 420px) {
+            .amount-gpt {
+                font-size: 36px;
+            }
+
+            .currency-gpt {
+                font-size: 20px;
+            }
+
+            .per-gpt {
+                font-size: 11px;
+                padding-bottom: 4px;
+            }
+
+            .price-card-gpt {
+                padding: 14px;
+            }
+          
+            .orig-amount-gpt {
+                font-size: 16px;
+            }
+
+            .amount-large-gpt {
+                font-size: 28px;
+            }
+
+            .currency-large-gpt {
+                font-size: 18px;
+            }
+
+            .per-small-gpt {
+                font-size: 11px;
+                padding-bottom: 3px;
+            }
+        }
