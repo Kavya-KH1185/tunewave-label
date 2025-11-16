@@ -1,29 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slides = [
     {
-      img: "../assets/future.jpg",
+      img: "assets/future.jpg",
       title: "01 — CATALOG",
       text: "Your music, your library, your way. TuneWave brings your entire catalog into one central hub — making it easy to organize, update, and keep every track accurate across platforms.",
     },
     {
-      img: "../assets/distribution.jpg",
+      img: "assets/distribution.jpg",
       title: "02 — DISTRIBUTION",
       text: "Take your music further. TuneWave delivers your tracks to major streaming platforms, supports flexible DSP partnerships, and automates workflows so your music reaches the world effortlessly.",
     },
     {
-      img: "../assets/royalties.jpg",
+      img: "assets/royalties.jpg",
       title: "03 — ROYALTIES MANAGEMENT",
       text: "Get paid accurately, every time. TuneWave automates royalty calculations and splits, ensuring contributors receive their share seamlessly and reducing errors.",
       extras: ["Blessy — 50%", "Sharon — 60%"]
     },
     {
-      img: "../assets/analytics.png",
+      img: "assets/analytics.png",
       title: "04 — REPORTS & ANALYTICS",
       text: "Know your music inside out. TuneWave gives you detailed performance reports, royalty tracking, and trend insights — helping you make informed decisions and maximize revenue in real time.",
       extras: ["🎯 Data Accuracy 70%", "💰 Revenue Focus 60%", "🌍 Audience Reach 80%"]
     },
     {
-      img: "../assets/support.webp",
+      img: "assets/support.webp",
       title: "05 — CLIENT GROWTH & SUPPORT",
       text: "We’re here for you. TuneWave offers multilingual support, quick responses, and a dedicated account manager to guide your growth and ensure long-term success."
     }
